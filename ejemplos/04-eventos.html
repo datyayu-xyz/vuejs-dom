@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mostrar texto</title>
+</head>
+<body>
+    <div id="app">
+        <button v-on:click="sumarUno">+1</button>
+        <p> {{ contador }} </p>
+    </div>
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                contador: 1
+            },
+            methods: {
+                sumarUno: function() {
+                    this.contador++;
+                }
+            }
+        })
+    </script>
+</body>
+</html>
