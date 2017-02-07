@@ -76,8 +76,8 @@ new Vue({
 })
 ```
 
-En este caso tenemos una propiedad `mensaje`, la cual esta bindeada a un `input`. Como Vue se encarga de actualizar la aplicación para mostrar el valor actual de las propiedades, no es sorpresa que al cambiar el valor del input la parte de
-`<p> {{ mensaje }} </p>` muestre el cambio también.
+En este caso tenemos una propiedad `mensaje`, la cual esta bindeada a un `input`. Como Vue se encarga de actualizar la aplicación para mostrar el valor actual de las propiedades, no es sorpresa que al cambiar el valor del input la parte de 
+`<p> {{ mensaje }} </p>` muestre el cambio también. 
 
 Lo interesante es que `<p> {{ mensajeInvertido }} </p>` también se actualiza al cambiar el input. Esto es debido a la computed property que declaramos.
 
@@ -174,13 +174,13 @@ Vue nos ofrece diferentes maneras de tratar con los estilos y clases de css, per
 .azul { background: blue; }
 ```
 ```html
-<div id="app">
+<div id="app">  
     <div :class="claseBloque"></div>
     <button @click="cambiarColor">Cambiar color</button>
-</div>
+</div>  
 ```
 ```js
-new Vue({
+new Vue({  
     el: '#app',
     data: {
         color: 'rojo'
@@ -213,7 +213,7 @@ cambiarColor: function() {
 }
 ```
 
-Lo relevante aquí es que tenemos también una computed property la cual simplemente retorna un string con las dos clases que queremos que tenga nuestro elemento (En nuestro caso, `bloque rojo` o `bloque azul`).
+Lo relevante aquí es que tenemos también una computed property la cual simplemente retorna un string con las dos clases que queremos que tenga nuestro elemento (En nuestro caso, `bloque rojo` o `bloque azul`). 
 ```js
 computed: {
     claseBloque: function() {
@@ -228,13 +228,13 @@ Esta computed property está ligada al atributo `class` de nuestro elemento, lo 
 ```
 
 
-Lo bueno de esta técnica es que nos permite incluir cuantas clases queramos sin complicar nuestro template y al mismo tiempo permite que Vue.js realice optimizaciones para hacer mejor la experiencia de nuestros usuarios.
+Lo bueno de esta técnica es que nos permite incluir cuantas clases queramos sin complicar nuestro template y al mismo tiempo permite que Vue.js realice optimizaciones para hacer mejor la experiencia de nuestros usuarios.  
 
 <iframe width="100%" height="300" src="//jsfiddle.net/datyayu/p9e0ozm9/8/embedded/js,html,css,result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 ---
 
-Con esto ya tenemos el conocimiento base de Vue.js para interactuar con el DOM pero si quieres aprender más checa el siguiente post donde revisamos como trabajar con condicionales y listas para agregar mayor valor a tus aplicaciones.
+Con esto ya tenemos el conocimiento base de Vue.js para interactuar con el DOM pero si quieres aprender puedes revisar [el siguiente post en la serie](/vuejs-listas) donde revisamos como trabajar con condicionales y listas para agregar mayor valor a tus aplicaciones.
 
 Como siempre, [los ejemplos de este post están disponible en github](https://github.com/datyayu-xyz/vuejs-dom) para cualquier duda que tengas o mejora que quieras ¡así que no dudes en hacerlo!
 
